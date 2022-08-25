@@ -62,7 +62,7 @@ Init Api
 ```sh
 import { initApi } from "logerr-system";
 
-export const { captureException } = initSupabase({
+export const { captureException } = initApi({
   baseUrl,
   authorization,
   project,
