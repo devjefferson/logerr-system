@@ -4,7 +4,7 @@
 [![Node.js version][nodejs-badge]][nodejs]
 [![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
-# logerr
+# logerr-system
 
 👩🏻‍💻 Developer Ready: An easy-to-start template to speed up building your NodeJS library.
 
@@ -18,45 +18,52 @@
 - NPM [scripts](#available-scripts) for common operations: test, release
 - Simple example of TypeScript code and unit test
 - .editorconfig for consistent file format
-- Environments management via [Volta][volta]
-- Example configuration for [GitHub Actions][gh-actions]
 
 ## Getting Started
 
 Make sure to be used with the latest Active LTS release version of [Node.js][nodejs].
 
-### Use as a repository template
+```sh
+yarn add logerr-system
+npm install logerr-system
+```
 
-Click the **[Use template][repo-template-action]** link (or the green button). Now start adding your code in the `src` and unit tests with `*.spec.ts`.
+Init
+
+```sh
+import { initSupabase } from "logerr-system";
+
+export const { captureException } = initSupabase({
+  baseUrl,
+  apiKey,
+  authorization,
+  project,
+});
+```
+
+Exemple
+
+```sh
+import { captureException } from "../services/LogErr";
+
+try{
+
+} catch (err){
+
+  captureException("message err", err);
+}
+
+```
 
 ### Clone repository
 
-To clone the repository use the following commands:
-
 ```sh
-git clone https://github.com/_devjefferson/logerr
-cd logerr
-npm install
+git clone https://github.com/_devjefferson/logerr-system
+cd logerr-system
+yarn install or npm install
 ```
 
 ### Download latest release
-
-Download and unzip current `master` branch or one of tags:
-
-```sh
-wget https://github.com/_devjefferson/logerr/archive/master.zip -O logerr.zip
-unzip logerr.zip && rm logerr.zip
-```
-
-## Available Scripts
-
-- `clean` - remove coverage data, Jest cache and transpiled files,
-- `build` - transpile TypeScript to ES6,
-- `build:watch` - interactive watch mode to automatically transpile source files,
-- `lint` - lint source files and tests,
-- `test` - run tests,
-- `test:watch` - interactive watch mode to automatically re-run tests
-- `release` - bump the version, commit, create release tag and publish to NPM registry
 
 ## License
 
@@ -82,5 +89,5 @@ Licensed under the MIT. See the [LICENSE](https://github.com/_devjefferson/loger
 [gh-actions]: https://github.com/features/actions
 [travis]: https://travis-ci.org
 [repo-template-action]: https://github.com/_devjefferson/logerr/generate
-[npm-badge]: https://img.shields.io/npm/v/logerr
-[npm]: https://www.npmjs.com/package/logerr
+[npm-badge]: https://img.shields.io/npm/v/logerr-system
+[npm]: https://www.npmjs.com/package/logerr-system
