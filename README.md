@@ -28,7 +28,7 @@ yarn add logerr-system
 npm install logerr-system
 ```
 
-Init
+Init Supabase
 
 ```sh
 import { initSupabase } from "logerr-system";
@@ -55,6 +55,33 @@ try{
 
 ```
 
+
+Init Api
+
+
+```sh
+import { initApi } from "logerr-system";
+
+export const { captureException } = initSupabase({
+  baseUrl,
+  authorization,
+  project,
+});
+```
+
+Exemple
+
+```sh
+import { captureException } from "../services/LogErr";
+
+try{
+
+} catch (err){
+
+  captureException("message err", err);
+}
+
+```
 ### Clone repository
 
 ```sh
