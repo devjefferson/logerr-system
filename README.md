@@ -1,8 +1,6 @@
 [![Sponsor][sponsor-badge]][sponsor]
 [![NPM version][npm-badge]][npm]
 [![TypeScript version][ts-badge]][typescript-4-2]
-[![Node.js version][nodejs-badge]][nodejs]
-[![Build Status - GitHub Actions][gha-badge]][gha-ci]
 
 # logerr-system
 
