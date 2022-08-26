@@ -1,4 +1,3 @@
-[![install size](https://packagephobia.now.sh/badge?p=logerr-system)](https://packagephobia.now.sh/result?p=logerr-system)
 [![Sponsor][sponsor-badge]][sponsor]
 [![NPM version][npm-badge]][npm]
 [![TypeScript version][ts-badge]][typescript-4-2]
@@ -6,10 +5,6 @@
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/logerr-system)
 
 # logerr-system
-
-👩🏻‍💻 Developer Ready: An easy-to-start template to speed up building your NodeJS library.
-
-🏃🏽 Instant Value: All basic tools included and configured:
 
 - [TypeScript][typescript] [4.2][typescript-4-2]
 - [ESLint][eslint] with some initial rules recommendation
