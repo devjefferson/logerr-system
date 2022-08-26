@@ -42,6 +42,18 @@ export const { captureException } = initSupabase({
 });
 ```
 
+DTO database
+
+```sh
+    {
+      "id": "int8 | string | number",
+      "error": "string | varchar",
+      "objError": "JSON | string | text",
+      "project": "string | varchar",
+      "created_at": "string | timestamptz",
+    }
+```
+
 ## Usage Supabase
 
 ```sh

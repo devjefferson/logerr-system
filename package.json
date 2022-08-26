@@ -1,9 +1,21 @@
 {
   "name": "logerr-system",
-  "version": "1.0.12",
+  "version": "1.0.14",
   "description": "Sistema simples para log de erros",
-  "author": "Jefferson da fonseca",
+  "author": "Jefferson fonseca",
   "license": "MIT",
+  "keywords": [
+    "npm",
+    "erros",
+    "error",
+    "supabase",
+    "error-handling",
+    "json",
+    "debug",
+    "exception",
+    "pretty",
+    "format"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/devjefferson/logerr-system"

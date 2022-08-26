@@ -1,8 +1,4 @@
 import Axios from 'axios';
-export type ErrorProps = {
-  error?: string;
-  objError?: any;
-};
 
 export type InitSupabaseProps = {
   baseUrl: string;
@@ -19,7 +15,7 @@ export type InitApiProps = {
 };
 
 export type Props = {
-  captureException: (error: string, objError: any) => Promise<void>;
+  captureException: (error: string, objError: Error | null) => Promise<void>;
 };
 
 export function initSupabase({
@@ -28,7 +24,10 @@ export function initSupabase({
   authorization,
   project,
 }: InitSupabaseProps): Props {
-  async function captureException(error: string, objError: any): Promise<void> {
+  async function captureException(
+    error: string,
+    objError: Error | null,
+  ): Promise<void> {
     const location = await (
       await fetch('https://geolocation-db.com/json/')
     ).json();
@@ -66,7 +65,10 @@ export function initApi({
   authorization,
   project,
 }: InitApiProps): Props {
-  async function captureException(error: string, objError: any): Promise<void> {
+  async function captureException(
+    error: string,
+    objError: Error | null,
+  ): Promise<void> {
     const location = await (
       await fetch('https://geolocation-db.com/json/')
     ).json();
