@@ -1,6 +1,9 @@
+[![install size](https://packagephobia.now.sh/badge?p=logerr-system)](https://packagephobia.now.sh/result?p=logerr-system)
 [![Sponsor][sponsor-badge]][sponsor]
 [![NPM version][npm-badge]][npm]
 [![TypeScript version][ts-badge]][typescript-4-2]
+[![npm downloads](https://img.shields.io/npm/dm/logerr-system.svg?style=flat-square)](https://npm-stat.com/charts.html?package=logerr-system)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/logerr-system)
 
 # logerr-system
 
@@ -26,7 +29,12 @@ yarn add logerr-system
 npm install logerr-system
 ```
 
-Init Supabase
+# Init Supabase
+
+Creating an instance
+You can create a new instance of logerr with a custom config.
+
+LogErr.ts
 
 ```sh
 import { initSupabase } from "logerr-system";
@@ -39,10 +47,10 @@ export const { captureException } = initSupabase({
 });
 ```
 
-Exemple
+## Usage Supabase
 
 ```sh
-import { captureException } from "../services/LogErr";
+import { captureException } from "./LogErr"; // Select LogErr.ts
 
 try{
 
@@ -53,9 +61,12 @@ try{
 
 ```
 
+# Init Api
 
-Init Api
+Creating an instance
+You can create a new instance of logerr with a custom config.
 
+LogErr.ts
 
 ```sh
 import { initApi } from "logerr-system";
@@ -67,10 +78,10 @@ export const { captureException } = initApi({
 });
 ```
 
-Exemple
+## Usage Api
 
 ```sh
-import { captureException } from "../services/LogErr";
+import { captureException } from "./LogErr"; // Select LogErr.ts
 
 try{
 
@@ -79,13 +90,6 @@ try{
   captureException("message err", err);
 }
 
-```
-### Clone repository
-
-```sh
-git clone https://github.com/_devjefferson/logerr-system
-cd logerr-system
-yarn install or npm install
 ```
 
 ### Download latest release
